@@ -261,7 +261,8 @@ app.get('/api/', (req, res) => {
     res.json(newObj)
 })
 
-app.listen(PORT , () => {
+app.listen(process.env.PORT || PORT , () => {
+    //process.env.PORT will default to heroku port first
     console.log(`The server is now running on port ${PORT}`);
 }) 
                          
