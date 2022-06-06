@@ -6,7 +6,7 @@ const cors = require('cors')
 const PORT = 8000
 
 app.use(cors())
-app.use( express.static('./'))
+app.use( express.static('./')) //finds main.js when in subfolder
 
 class Deity {    
     constructor(name, summary, titles, alignment, worshipers, domains, domains2e, favoredWeapon) {
