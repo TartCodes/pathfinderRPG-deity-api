@@ -28,6 +28,9 @@ class Deity {
 // }
 
 const newObj = {
+
+    'unknown' : new Deity ('Input not found: enter a different name/location/diety'), 
+
     'abadar' : new Deity ( 'Abadar',
                            'Abadar (pronounced AH-bah-dar) is known to be a patient deity. Maintaining a strong neutral stance in his actions, he sets forth to further expand civilization and order in the world and among the peoples of Golarion.',
                            `Master of the First Vault, Judge of the Gods, The Gold-Fisted`,
@@ -250,7 +253,7 @@ app.get('/api/:deity', (req, res) => {
     if(newObj[deityInfo]){
         res.json(newObj[deityInfo])
     } else {
-        res.json('Input not found: enter a different name/location/diety')
+        res.json(newObj['unknown'])
     }    
 })
 
