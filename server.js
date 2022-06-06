@@ -245,8 +245,8 @@ app.get('/', (req, res) => {
 })
 
 
-app.get('/api/:input', (req, res) => {
-    const deityInfo = req.params.input.toLocaleLowerCase()
+app.get('/api/:deity', (req, res) => {
+    const deityInfo = req.params.deity.toLocaleLowerCase()
     if(newObj[deityInfo]){
         res.json(newObj[deityInfo])
     } else {
@@ -259,7 +259,7 @@ app.get('/api/', (req, res) => {
 })
 
 app.listen(PORT , () => {
-    console.log(`There server is now running on port ${PORT}`);
+    console.log(`The server is now running on port ${PORT}`);
 }) 
                          
                           
