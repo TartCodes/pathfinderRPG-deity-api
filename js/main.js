@@ -6,7 +6,7 @@ async function getInfo() {
   const deity = document.querySelector("#input").value;
   try {
     const response = await fetch(
-      `https://pathfinder-deity-info.herokuapp.com/${deity}`
+      `https://pathfinder-deity-info.herokuapp.com/api/${deity}`
     );
     const data = await response.json();
     for(const [key,value] of Object.entries(data)) {
